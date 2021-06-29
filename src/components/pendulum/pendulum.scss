@@ -1,0 +1,63 @@
+.pendulum-wrapper {
+    border: none; 
+    border-bottom: 1px solid grey;
+    padding: 10px 15px;
+    height: 440px;
+}
+.pendulum__base {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 0 0 30px;
+}
+  
+.pendulum__holder {
+    width: 70px;
+    height: 3px;
+    background: black;
+    margin: auto;
+}
+  
+.pendulum__thread {
+    display: inline-block;
+    width: 2px;
+    height: 200px;
+    background: black;
+    border-radius: 5px;
+    position: relative;
+    transform-origin: 50% 0;
+    animation: moveIt 2.5s ease-in-out infinite;
+}
+  
+.pendulum__thread:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: grey;
+    border: 2px solid white;
+    top: -4.5px;
+    left: -3.5px;
+}
+  
+.pendulum__plummet {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 50% 40%, white, #ff0000cf 50%, #ff0000 70%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -18px;
+    left: -9px;
+}
+  
+@keyframes moveIt {
+    0%, 100% {
+      transform: rotate(45deg);
+    }
+    50% {
+      transform: rotate(-45deg);
+    }
+}
+  

@@ -1,0 +1,50 @@
+.settings-panel__wrapper {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+    & :nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        & input {
+            margin-right: 30px;
+        }
+    }
+    & :nth-child(2) {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        & input {
+            margin-right: 30px;
+        }
+    }
+    & :nth-child(3) {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+.settings-panel__toggle-simulation {
+    background-color: rgb(0, 117, 255);
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 40px;
+    box-sizing: border-box;
+    height: 40px;
+    margin: 0 auto;
+    &:hover,
+    &:focus {
+        background-color: rgb(0, 92, 200);
+    }
+    &:active {
+        background-color: rgb(55, 147, 255);
+    }
+}
